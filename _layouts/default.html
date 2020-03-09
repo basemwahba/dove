@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+<link rel="stylesheet" href="assets/main.css"  type="text/css"/>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {% include footer.html %}
+    {% include katex.html  %}
+    {% include modal.html %}
+    {% include lazyload.html %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{ "/assets/main.js" | relative_url }}"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+  </body>
+
+</html>
